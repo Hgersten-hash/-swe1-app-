@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-2!&8v@phuvv4abj%prs(d6(_m@w!s!5f8qk#=0mqo5q8a7-60+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-polls-env.elasticbeanstalk.com','localhost']
+ALLOWED_HOSTS = ['django-polls-dev.us-east-1.elasticbeanstalk.com','localhost']
 
 
 # Application definition
