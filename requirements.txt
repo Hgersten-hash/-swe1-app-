@@ -1,3 +1,4 @@
-asgiref==3.6.0
--e git+https://github.com/django/django.git@4b066bde692078b194709d517b27e55defae787c#egg=Django
+asgiref==3.2.10
+Django==3.1
+pytz==2022.7.1
 sqlparse==0.4.3
