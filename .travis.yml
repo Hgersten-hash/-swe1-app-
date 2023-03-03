@@ -1,7 +1,23 @@
 language: python
 
 python:
-  - 3.7
+  - 3.10.4
 
 install:
   - pip install -r requirements.txt
+
+script:
+  - black --check --exclude=migrations .
+  - flake8 --exclude=migrations --max-line-length=88
+  - python manage.py test
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id:
+    secure: $AWS_ACCESS_KEY_ID
+  secret_access_key:
+    secure: $AWS_SECRET_ACCESS_KEY
+  region: "us-east-1"
+  app: "django-tutorial"
+  env: "django-env"
+  bucket_name: "elasticbeanstalk-us-east-1-919736960713"

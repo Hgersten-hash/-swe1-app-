@@ -30,7 +30,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-polls-dev.us-east-1.elasticbeanstalk.com','localhost']
+ALLOWED_HOSTS = ['django-env.eba-jusmecna.us-east-1.elasticbeanstalk.com', 'localhost']
 
 
 # Application definition
