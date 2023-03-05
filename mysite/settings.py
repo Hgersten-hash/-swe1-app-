@@ -30,7 +30,7 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["django-env.eba-jusmecna.us-east-1.elasticbeanstalk.com", "localhost"]
+ALLOWED_HOSTS = ["django-env.eba-jusmecna.us-east-1.elasticbeanstalk.com", "localhost"] # noqa E501
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_coverage_plugin",
 ]
 
 MIDDLEWARE = [
