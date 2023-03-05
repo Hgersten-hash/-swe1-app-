@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 from pathlib import Path
 import os
 import environ
-from django.core.exceptions import ImproperlyConfigured
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,15 +26,7 @@ env = environ.Env()
 environ.Env.read_env()
 
 
-def get_env_variable(var_name):
-    try:
-        return os.environ[var_name]
-    except KeyError:
-        error_msg = "set the %s environment variable" % var_name
-        raise ImproperlyConfigured(error_msg)
-
-
-SECRET_KEY = get_env_variable('SECRET_KEY')
+SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
