@@ -6,6 +6,11 @@ python:
 env:
   global:
     - DJANGO_SECRET_KEY=$DJANGO_SECRET_KEY
+    - DATABASE_HOST=$DATABASE_HOST
+    - DATABASE_NAME=$DATABASE_NAME
+    - DATABASE_USER=$DATABASE_USER
+    - DATABASE_PASS=$DATABASE_PASS
+    - DATABASE_PORT=$DATABASE_PORT
 
 install:
   - pip install -r requirements.txt
