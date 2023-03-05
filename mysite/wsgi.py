@@ -11,7 +11,7 @@ import os
 from dotenv import load_dotenv
 from django.core.wsgi import get_wsgi_application
 
-project_folder = os.path.expanduser('./')  # adjust as appropriate
+project_folder = os.path.expanduser('/Users/hannahgersten/Desktop/NYU/Spring 2023/SWE/Django-Tutorial/mysite/mysite/')  # noqa E501
 load_dotenv(os.path.join(project_folder, '.env'))
 
 
