@@ -37,7 +37,7 @@ deploy:
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   region: "us-east-1"
   app: "django-polls"
-  env: "django-polls-dev"
+  env: "django-polls-dev-1"
   bucket_name: "elasticbeanstalk-us-east-1-919736960713"
   on:
     repo: Hgersten-hash/-swe1-app-
