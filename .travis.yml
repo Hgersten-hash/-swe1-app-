@@ -3,6 +3,10 @@ language: python
 python:
   - 3.8
 
+env:
+  global:
+    - DJANGO_SECRET_KEY=$DJANGO_SECRET_KEY
+
 install:
   - pip install -r requirements.txt
 
