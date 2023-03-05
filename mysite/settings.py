@@ -30,7 +30,8 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-env.eba-jusmecna.us-east-1.elasticbeanstalk.com', 'localhost']
+ALLOWED_HOSTS = ['django-env.eba-jusmecna.us-east-1.elasticbeanstalk.com',
+                 'localhost']
 
 
 # Application definition
@@ -80,7 +81,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 if 'RDS_DB_NAME' in os.environ:
-  DATABASES = {
+    DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': os.environ['RDS_DB_NAME'],
@@ -91,7 +92,7 @@ if 'RDS_DB_NAME' in os.environ:
         }
     }
 else:
-  DATABASES = {
+    DATABASES = {
       'default': {
           'ENGINE': 'django.db.backends.postgresql_psycopg2',
           'NAME': env("DATABASE_NAME"),
@@ -100,23 +101,23 @@ else:
           'HOST': env("DATABASE_HOST"),
           'PORT': env("DATABASE_PORT"),
       }
-  }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator', # noqa: <E501> 
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator', # noqa: <E501>
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator', # noqa: <E501>
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator', # noqa: <E501>
     },
 ]
 

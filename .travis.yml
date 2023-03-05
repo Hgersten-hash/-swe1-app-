@@ -11,8 +11,8 @@ install:
 #   - python manage.py collectstatic --noinput
 
 script:
-  - black --check . #--exclude=migrations .
   - flake8 --exclude=migrations --max-line-length=88
+  - black --check --exclude=migrations .
   - python manage.py test
 
 # deploy:
