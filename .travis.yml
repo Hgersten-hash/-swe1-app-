@@ -5,7 +5,7 @@ python:
 
 before_install:
   - export COVERALLS_REPO_TOKEN=$COVERALLS_REPO_TOKEN
-  
+
 env:
   global:
     - DJANGO_SECRET_KEY=$DJANGO_SECRET_KEY
@@ -30,13 +30,14 @@ script:
 
 after_success:
   - coveralls
-# deploy:
-#   provider: elasticbeanstalk
-#   access_key_id:
-#     secure: $AWS_ACCESS_KEY_ID
-#   secret_access_key:
-#     secure: $AWS_SECRET_ACCESS_KEY
-#   region: "us-east-1"
-#   app: "django-polls"
-#   env: "django-polls-dev"
-#   bucket_name: "elasticbeanstalk-us-east-1-919736960713"
+  
+deploy:
+  provider: elasticbeanstalk
+  access_key_id:
+    secure: $AWS_ACCESS_KEY_ID
+  secret_access_key:
+    secure: $AWS_SECRET_ACCESS_KEY
+  region: "us-east-1"
+  app: "django-polls"
+  env: "django-polls-dev"
+  bucket_name: "elasticbeanstalk-us-east-1-919736960713"
