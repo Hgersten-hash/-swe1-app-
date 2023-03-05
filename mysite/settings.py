@@ -30,7 +30,10 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["django-env.eba-jusmecna.us-east-1.elasticbeanstalk.com", "localhost"] # noqa E501
+ALLOWED_HOSTS = [
+    "django-env.eba-jusmecna.us-east-1.elasticbeanstalk.com",
+    "localhost",
+]  # noqa E501
 
 
 # Application definition
