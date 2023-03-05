@@ -18,6 +18,6 @@ deploy:
   secret_access_key:
     secure: $AWS_SECRET_ACCESS_KEY
   region: "us-east-1"
-  app: "django-tutorial"
-  env: "django-env"
+  app: "django-polls"
+  env: "django-polls-dev"
   bucket_name: "elasticbeanstalk-us-east-1-919736960713"
