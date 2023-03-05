@@ -6,14 +6,14 @@ python:
 install:
   - pip install -r requirements.txt
 
-# before_script:
-#   - python manage.py migrate
+before_script:
+  - python manage.py migrate
 #   - python manage.py collectstatic --noinput
 
-# script:
-#   - black --check . #--exclude=migrations .
-#   - flake8 --exclude=migrations --max-line-length=88
-#   - python manage.py test
+script:
+  - black --check . #--exclude=migrations .
+  - flake8 --exclude=migrations --max-line-length=88
+  - python manage.py test
 
 # deploy:
 #   provider: elasticbeanstalk
