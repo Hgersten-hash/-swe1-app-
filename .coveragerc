@@ -1,0 +1,7 @@
+source = .
+omit =
+    */migrations/*
+    manage.py
+    */__init__.py
+    */settings.py
+    */wsgi.py
