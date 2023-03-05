@@ -31,7 +31,7 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    # "172.31.26.68",
+    "172.31.26.68",
     "django-polls-dev.us-east-1.elasticbeanstalk.com",
     "localhost",
 ]  # noqa E501
