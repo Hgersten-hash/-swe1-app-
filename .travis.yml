@@ -42,7 +42,7 @@ deploy:
   env: "django-polls-dev"
   bucket_name: "elasticbeanstalk-us-east-1-919736960713"
   on:
-    repo: Hgersten-hash/-swe1-app
+    repo: Hgersten-hash/-swe1-app-
     branches:    # ← new!
       only:      # ← new!
         - main # ← new!
